@@ -1,0 +1,60 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+<meta charset="utf-8">  
+<title>jQuery UI Tooltip functionality</title>  
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+  
+<!-- Javascript -->  
+<script>  
+$(function() {  
+$("#text_tooltip").tooltip({
+  position: {
+      my: "center bottom-10", // Position tooltip above the element
+      at: "center top"  }
+});  
+$("#button_tooltip").tooltip({
+  position: {
+      my: "center bottom-10", // Position tooltip above the element
+      at: "center top"  }
+});  
+});  
+</script> 
+
+<!--adjust tooltip look through CSS style -->
+<style>
+    .ui-tooltip {
+    background: #ffffff; /* Light white background */
+    border: 1px solid #d3d3d3; /* Light gray border */
+    color: #000; /* Black text */
+    font-size: 10pt; /* Small font size */
+    padding: 5px; /* Padding */
+    box-shadow: none; /* Remove box shadow */
+    border-radius: 3px; /* Slightly rounded corners */
+  }
+  /*.ui-tooltip {
+    max-width: 300px; /* Adjust the maximum width of the tooltip 
+    word-wrap: break-word;
+    font-size: 12px; /* Adjust the font size 
+    padding: 5px; /* Adjust the padding 
+  }*/
+</style> 
+
+</head>  
+<body> 
+  <br><br> 
+  <p>
+    <a id="text_tooltip" href="https://malicious-website.com/verify" title="https://www.trustedbank.com/verify">
+      Hover over this text to see the tooltip
+    </a>
+  </p>
+  
+  <br><br><br><br>
+  
+  <button id="button_tooltip" title="https://www.trustedbank.com/verify" onclick="window.location.href='https://malicious-website.com/verify'">
+    Hover over this button to see the tooltip
+  </button>  
+</body>  
+</html>  

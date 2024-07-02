@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text or Button with Tooltip</title>
+
+<br><br><br>
+
+<!--CSS Part begins-->
+<style>
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }   
+
+  .tooltip-container .tooltip {
+    visibility: hidden;
+    width: 250px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Position the tooltip above the container */
+    left: 50%;
+    margin-left: -100px; /* Use negative half of the width to center */ 
+    opacity: 0;
+    transition: opacity 0.3s;
+  } 
+
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .tooltip-container .tooltip a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+  }
+
+
+  /* Hide default browser tooltip */
+   /* 	a {
+    text-decoration: none; /* Remove underline 
+    cursor: pointer; /* Ensure cursor shows as pointer on hover 
+        }  */
+</style>
+</head>
+
+
+<body>
+  <!-- Text with Tooltip 
+   in VS code defult browser will display defult tooltip, but in firefox and Microsoft Edge, 
+   the original tooltip will be hidden, only the custom CSS tooltip is shown
+   The Tooltip is with hyperlink which leads to malicious website-->
+  <div class="tooltip-container">
+    <a href="https://malicious-website.com/verify">Click me</a>
+    <div class="tooltip">
+        <a href="https://malicious-website.com/verify" target="_blank">https://www.trustedbank.com/verify</a>
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+  <!-- Button with Tooltip 
+   the fake tooltip is with link text-->
+  <div class="tooltip-container">
+    <button onclick="window.location.href='https://malicious-website.com/verify'">Click me</button>
+    <div class="tooltip">
+        https://www.trustedbank.com/verify</a>
+    </div>
+  </div>
+</body>
+</html>
+
+  

