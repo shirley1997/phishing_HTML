@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<style>
+    .content {
+        text-align: center;
+        font-size:20px;
+    }
+
+    .tooltip-link {
+        position: relative;
+        text-decoration: none;
+        color: #000; /* Adjust link color */
+    }
+    .tooltip-link:hover:after {
+        content: "https://www.trustedbank.com/verify";
+        position: absolute;
+        font-size: small;
+        background-color: #555;
+        color: #fff;
+        border-radius: 6px;
+        padding: 6px;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s;
+    }
+    
+    .tooltip-link:hover:after {
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+
+<body>
+    <br><br><br><br>
+    <div class="content">
+        <a href="https://malicious-website.com/verify" class="tooltip-link">Click here for more information</a>
+    </div>
+</body>
+
+</html>

