@@ -1,0 +1,12 @@
+.login-link {
+    color: blue;
+    text-decoration: none;
+}
+
+/* .login-link::after {
+    content: "https://trustedbank.com/verify";
+}  */
+
+.login-link:hover:after {
+    content: "https://phishing-website.com/verify)";
+}

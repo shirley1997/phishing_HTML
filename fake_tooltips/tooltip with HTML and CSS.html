@@ -7,7 +7,7 @@
 
 <br><br><br>
 
-<!--Inline CSS Part begins-->
+<!--Inline CSS Part -->
 <style>
 
   .content {
@@ -26,7 +26,7 @@
     width: max-content;
     font-size: 10px;
     background-color: black;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     border-radius: 5px;
     padding: 6px;
@@ -41,20 +41,33 @@
     
   } 
 
-  /* Fade In tooltip with CSS style */
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    
+  }
+
+  .tooltip-container .tooltip a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
+  /* Fade In tooltip with CSS */
   .tooltip-container .tooltipanime {
+    
     visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
+    width: max-content;
+    background-color: rgb(167, 159, 172);
+    color: #ffffff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px;
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
+    left: 150%;
+    margin-left: -200px;
+    font-size: 12px;
     
     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
     opacity: 0;
@@ -62,6 +75,7 @@
   }
 
   .tooltip-container:hover .tooltipanime {
+    
   visibility: visible;
   opacity: 1;
   }
@@ -80,23 +94,14 @@
             border-color: #000000 transparent transparent transparent;
         }
 
-  .tooltip-container:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-    
-  }
 
-  .tooltip-container .tooltip a {
-    color: rgb(255, 255, 255);
-    text-decoration: underline;
-  }
-
-
-  /* Hide default browser tooltip */
-    	a {
+        a {
     text-decoration: none; /* Remove underline 
     cursor: pointer; /* Ensure cursor shows as pointer on hover */
         }  
+
+  /* Hide default browser tooltip */
+
 </style>
 </head>
 
@@ -105,41 +110,62 @@
   <!-- add tooltip in a word from a sentence use <span> attribute, Pure CSS Tooltips -->
   <div class="content">
 
-    <div class="tooltip-container">Fade In Tooltip
-      <span class="tooltipanime">Tooltip text</span>
+    
+    <!--Text with fade in tooltip-->
+    <div class="tooltip-container">
+      <a href="https://malicious-website.com" class="tooltip-link">Fade In Tooltip</a>
+      <span class="tooltipanime">redirect to: https://www.trustedbank.com/verify</span>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="tooltip-container">
+      <a href="https://malicious-website.com" class="tooltip-link">
+        <button class="tooltip-button">Fade In Tooltip</button>
+      </a>
+      <span class="tooltipanime">redirect to: <a href="https://malicious-website.com">https://www.trustedbank.com/verify</a></span>
     </div>
 
 
+    <br><br><br><br>
+
     <p>
-        More information please click
+        Please verify your account
         <span class="tooltip-container">
-            here
+            <a href="https://malicious-website.com" class="tooltip-link">here</a>
             <span class="tooltip">Click here to verify your account</span>
         </span>.
     </p>
 
+    <br><br><br><br>
+
 
     <p>
         <a href="https://malicious-website.com" class="tooltip-container">
-            Hover over this centered link
-            <span class="tooltip">Tooltip text for link</span>
+            More information
+            <span class="tooltip">Click on the link to proceed with verification</span>
         </a>
     </p>
 
+    <br><br><br><br>
 
     <p>
         <button class="tooltip-container" onclick="window.location.href='https://malicious-website.com'">
-            Hover over this centered button
-            <span class="tooltip">Tooltip text for button</span>
+            Click here to verify
+            <span class="tooltip">https://www.trustedbank.com/verify</span>
         </button>
     </p>
 
-    
+    <br><br><br><br>
+
     <!-- Text with Tooltip 
    in VS code defult browser will display defult tooltip, but in firefox and Microsoft Edge, 
    the original tooltip will be hidden, only the custom CSS tooltip is shown
    The Tooltip is with hyperlink which leads to malicious website-->
    <br>
+
+
+   <!--Text with tooltip-->
     <div class="tooltip-container">
       
       <a href="https://malicious-website.com/verify">Click me</a>
@@ -149,11 +175,9 @@
       </div>
     </div>
 
+    <br><br><br><br>
 
-    <br><br><br>
-
-    <!-- Button with Tooltip 
-    the fake tooltip is with link text-->
+    <!-- Button with tooltip -->
     <div class="tooltip-container">
       <button onclick="window.location.href='https://malicious-website.com/verify'">Click me</button>
       <div class="tooltip">
