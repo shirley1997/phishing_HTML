@@ -3,11 +3,11 @@
    <head>
       <title>Ihre Telekom Mobilfunk RechnungOnline Juni 2024</title>
                
-               <!-- for Ropemaker-->
-               <link rel="stylesheet" href="https://shirley1997.github.io/ropemaker-test-links.css">
+      <!-- for Ropemaker-->
+       <link rel="stylesheet" href="https://shirley1997.github.io/ropemaker-test-links.css">
 
-               <!-- original stylesheet-->
-               <link rel="important stylesheet" href="chrome://messagebody/skin/messageBody.css">   
+      <!-- original stylesheet-->
+      <link rel="important stylesheet" href="chrome://messagebody/skin/messageBody.css">   
 
 
                
@@ -25,15 +25,18 @@
             
 
 
-                             /* for bootstrap tooltip  */
-                             .boottooltip {
-                        font-size: 80px; /* Adjust the font size */
-                     }
-                     .boottooltip-inner {
-                           background-color: #766c6c; /* Custom background color */
-                           color: #ffffff; /* Text color */
-                           font-size: 40px;
-                     }
+            /* for bootstrap tooltip  */
+            .boottooltip {
+            font-size: 80px; /* Adjust the font size */
+            }
+
+            .boottooltip-inner {
+            background-color: #766c6c; /* Custom background color */
+            color: #ffffff; /* Text color */
+            
+            }
+
+
         .content {
           text-align: center;
         }
@@ -330,7 +333,7 @@
                         </tr>
                         <tr>
                            <td>
-                              <div style="margin: 25px 30px 25px 25px; color: #444748; background-color: #ffffff; line-height: 1.4; font-family: Arial; font-size: 17px;">Ihr Rechnungsarchiv inklusive Gutschriften und Einzelverbindungen finden Sie im: <a href="https://www.telekomm.de/kundencenter" target="_blank" style="color: #00A4D6; text-decoration: underline;">https://www.telekom.de/kundencenter</a>. (Link Mismatch)</div>
+                              <div style="margin: 25px 30px 25px 25px; color: #444748; background-color: #ffffff; line-height: 1.4; font-family: Arial; font-size: 17px;">Ihr Rechnungsarchiv inklusive Gutschriften und Einzelverbindungen finden Sie im: <a href="https://www.telekomm.de/kundencenter" target="_blank" style="color: #00A4D6; text-decoration: underline;">https://www.telekom.de/kundencenter</a>. <b>(Link Mismatch)</b></div>
                            </td>
                         </tr>
                         <tr>
@@ -342,7 +345,7 @@
                                         Kontoauszug
                                     </button>
                                 </form> 
-                                (HTML form-tag with fake tooltip) zeigt Ihnen die Kontobewegungen der letzten 12 Monate.
+                                <b>(HTML form-tag with fake tooltip using title attribute)</b> zeigt Ihnen die Kontobewegungen der letzten 12 Monate.
                                 
                            </td>
                         </tr>
@@ -392,9 +395,9 @@
                                         </td>
                                        </tr>
                                        <tr>
-                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Ihre Verträge online<br>im Kundencenter (fake normal tooltip with HTML and CSS)</span></td>
-                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Telekom hilft<br>Community (fake fade in tooltip with HTML and CSS)</span></td>
-                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Hilfe zur<br>Rechnung (fake normal tooltip with CSS hover effect)</span></td>
+                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Ihre Verträge online<br>im Kundencenter <br><font color="black">(fake tooltip using HTML and CSS)</font></span></td>
+                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Telekom hilft<br>Community <br><font color="black">(fake fade in tooltip using HTML and CSS)</font></span></td>
+                                          <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #E20074; font-size: 14px; font-weight: bold;">Hilfe zur<br>Rechnung <br><font color="black">(fake tooltip using CSS hover effect)</font></span></td>
                                        </tr>
                                     </tbody>
                                  </table>
@@ -436,20 +439,20 @@
                                 <div class="popup-container" onclick="PopUpFunction()">Sicherheitshinweise 
                                     <span class="popuptooltip" id="Poptooltip">Redirect to: https://www.telekom.de/sicherheit</span>
                                 </div>
-                                (popup tooltips with javascript)
+                                <b>(popup tooltips using javascript)</b>
                                 <br><br>
 
                                 Diese E-Mail wird versendet aufgrund der Einwilligung, über Produkte und Dienstleistungen der Telekom informiert zu werden. Über den Link 
                                  <span id="link1" ><a href="http://telekom.de">Abmeldung</a></span>
                                  <span id="link2" ><a href="http://telekome.de">Abmeldung</a></span> 
-                                 (Ropemaker) kann die Einwilligung jederzeit im Kundencenter widerrufen werden.  
+                                 <b>(Ropemaker)</b> kann die Einwilligung jederzeit im Kundencenter widerrufen werden.  
                               
 
 
                            <br><br>
 
                                 Die Prämie für die Empfehlung richtet sich nach dem tatsächlich bestellten Produkt im Zeitpunkt des Vertragsabschlusses des Kunden. Mehr Information bitte klicken Sie
-                                <a href="https://telekome.de/information" data-toggle="boottooltip" data-placement="top" title="Redirect to: https://www.telekom.de/information" style="color: #00A4D6; text-decoration: underline;">here</a>.
+                                <a href="https://telekome.de/information" data-toggle="boottooltip" data-placement="top" title="Redirect to: https://www.telekom.de/information" style="color: #00A4D6; text-decoration: underline;">here</a>.<b>(fake tooltip using bootstrap)</b>
                               
                             <br><br>
 
@@ -459,7 +462,7 @@
 
                               <!-- Mailto-Scheme -->
                                 Eine direkte Antwort auf diese E-Mail ist nicht möglich. Wenn Sie uns per E-Mail erreichen wollen, nutzen Sie bitte unseren 
-                                <a href="mailto:xueting.huang404@gmail.com?subject=contact%20formular&amp;body=please%20write%20your%20username%20here:%0A%0Aplease%20write%20your%20password%20here:%0A%0Aplease%20write%20down%20your%20questions%20or%20concerning:%0A%0A" style="color: #00A4D6; text-decoration: underline;">Kontakt per E-Mail</a>.(Mailto-Scheme)</div>
+                                <a href="mailto:xueting.huang404@gmail.com?subject=contact%20formular&amp;body=please%20write%20your%20username%20here:%0A%0Aplease%20write%20your%20password%20here:%0A%0Aplease%20write%20down%20your%20questions%20or%20concerning:%0A%0A" style="color: #00A4D6; text-decoration: underline;">Kontakt per E-Mail</a>.<b>(Mailto-Scheme)</b></div>
                            </td>
                         </tr>
                         <tr>
