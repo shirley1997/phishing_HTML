@@ -22,6 +22,17 @@
       
       
       <style>
+
+                            /* Customize bootstrao tooltip*/
+                            .tooltip-custom .tooltip-inner {
+            max-width: none; /* Prevents the tooltip from having a max-width */
+        }
+        .tooltip-custom.bs-tooltip-top .arrow::before {
+            border-top-color: #000; /* Customize the tooltip arrow color if needed */
+        }
+        .tooltip-custom.bs-tooltip-top {
+            margin-top: 50px !important; /* Adjust this value to move the tooltip lower */
+        }
             
 
 
@@ -210,6 +221,8 @@
                     from {opacity: 0;}
                     to {opacity:1 ;}
                     }
+
+
 
                    
 
@@ -451,8 +464,9 @@
 
                            <br><br>
 
-                                Die Prämie für die Empfehlung richtet sich nach dem tatsächlich bestellten Produkt im Zeitpunkt des Vertragsabschlusses des Kunden. Mehr Information bitte klicken Sie
-                                <a href="https://telekome.de/information" data-toggle="boottooltip" data-placement="top" title="Redirect to: https://www.telekom.de/information" style="color: #00A4D6; text-decoration: underline;">here</a>.<b>(fake tooltip using bootstrap)</b>
+                           Die Prämie für die Empfehlung richtet sich nach dem tatsächlich bestellten Produkt im Zeitpunkt des Vertragsabschlusses des Kunden. Mehr Information bitte klicken Sie
+                           <a href="https://telekome.de/information" data-toggle="boottooltip" data-html="true" data-placement="top" title='Redirect to: <a href="https://www.telekom.de/information" style="color: #00A4D6; text-decoration: underline;">https://www.telekom.de/information</a>' style="color: #00A4D6; text-decoration: underline;" class="tooltip-custom">here</a>.<b>(fake tooltip using bootstrap)</b>
+                          
                               
                             <br><br>
 
@@ -509,9 +523,11 @@
 
 
 
-   $(document).ready(function(){
-       $('[data-toggle="boottooltip"]').tooltip();   
-   });
+        $(document).ready(function(){
+         $('[data-toggle="boottooltip"]').tooltip({
+            offset: '0, 10' // Adjust the offset here: x, y
+        });
+    });
 </script>
 
 
