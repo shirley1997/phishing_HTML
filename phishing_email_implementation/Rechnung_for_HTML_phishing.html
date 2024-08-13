@@ -9,13 +9,15 @@
       <!-- original stylesheet-->
       <link rel="important stylesheet" href="chrome://messagebody/skin/messageBody.css">   
 
+   
+      
 
-               
       <!-- for Bootstrap Tooltips-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-       
+      
+
      
 
 
@@ -23,26 +25,18 @@
       
       <style>
 
-                            /* Customize bootstrao tooltip*/
-                            .tooltip-custom .tooltip-inner {
-            max-width: none; /* Prevents the tooltip from having a max-width */
-        }
-        .tooltip-custom.bs-tooltip-top .arrow::before {
-            border-top-color: #000; /* Customize the tooltip arrow color if needed */
-        }
-        .tooltip-custom.bs-tooltip-top {
-            margin-top: 50px !important; /* Adjust this value to move the tooltip lower */
-        }
+
             
 
 
             /* for bootstrap tooltip  */
             .boottooltip {
-            font-size: 80px; /* Adjust the font size */
+            font-size: 12px; /* Adjust the font size */
+            
             }
 
             .boottooltip-inner {
-            background-color: #766c6c; /* Custom background color */
+            background-color: #c55e5e; /* Custom background color */
             color: #ffffff; /* Text color */
             
             }
@@ -63,7 +57,7 @@
           visibility: hidden;
           width: max-content;
           font-size: 10px;
-          background-color: black;
+          background-color: rgb(113, 151, 223);
           color: rgb(255, 255, 255);
           text-align: center;
           border-radius: 5px;
@@ -178,7 +172,7 @@
                     visibility: hidden;
                     font-size: 10px;
                     width: 250px;
-                    background-color: #555;
+                    background-color: #2d47da;
                     color: #fff;
                     text-align: center;
                     border-radius: 6px;
@@ -211,7 +205,7 @@
                     animation: fadeIn 0.5s
                     }
                     
-                    /* Add animation (fade in the popup) */
+                    
                     @-webkit-keyframes fadeIn {
                     from {opacity: 0;}
                     to {opacity: 1;}
@@ -221,6 +215,8 @@
                     from {opacity: 0;}
                     to {opacity:1 ;}
                     }
+
+
 
 
 
@@ -320,7 +316,7 @@
                                           <td colspan="2" style="font-family: Arial; text-align: left; color: #417AAA; font-size: 20px; font-weight: bold; background-color: #417AAA;">
                                             <a href="telekom.de/rechnungonline" target="_blank" title="redirect to https://www.telekom.de/rechnungonline">
                                                 
-                                                <button class="button" style="width: 200px; height: 50px; background-color: #ffffff; font-weight: bold; font-size: 10px;" >RechnungOnline ansehen (HTML base-tag)</button>
+                                                <button style="width: 200px; height: 50px; background-color: #ffffff; font-weight: bold; font-size: 10px;" >RechnungOnline ansehen (HTML base-tag)</button>
 
                                             </a>
                                             
@@ -354,11 +350,11 @@
                               <div style="margin: 25px 30px 25px 25px; color: #444748; background-color: #ffffff; line-height: 1.4; font-family: Arial; font-size: 17px;">
                                 Sie möchten wissen, ob Beträge offen sind?
                                 <br>Ihr <form action="http://telekom1.de/kundencenter" style="display: inline;">
-                                    <button type="submit" style="border: none; background-color: transparent; color: #00A4D6; text-decoration: underline; cursor: pointer; padding: 0; font-family: inherit; font-size: 17px; " title="redirect to: http://www.telekom.de/kundencenter">
+                                    <button type="submit" style="border: none; background-color: transparent; color: #00A4D6; text-decoration: underline; cursor: pointer; padding: 0; font-family: inherit; font-size: 17px; " >
                                         Kontoauszug
                                     </button>
                                 </form> 
-                                <b>(HTML form-tag with fake tooltip using title attribute)</b> zeigt Ihnen die Kontobewegungen der letzten 12 Monate.
+                                <b>(HTML form-tag)</b> zeigt Ihnen die Kontobewegungen der letzten 12 Monate.
                                 
                            </td>
                         </tr>
@@ -443,14 +439,14 @@
                         </tr>
                         <tr>
 
-                            <!-- popup tooltip with javasrcipt -->
+                            
                            <td>
 
-
+                              <!-- popup tooltip with javasrcipt -->
                               <div style="margin: 25px 30px 25px 25px; background-color: #ffffff; line-height: 1.4; font-family: Arial; color: #737577; font-size: 12px;">
                                 Diese E-Mail wurde für die Adresse Kaiserstr. 12; Kundenkonto: 0012345678 erstellt. Weitere Informationen zu den Sicherheitsmerkmalen von RechnungOnline finden Sie unter 
                                 <div class="popup-container" onclick="PopUpFunction()">Sicherheitshinweise 
-                                    <span class="popuptooltip" id="Poptooltip">Redirect to: https://www.telekom.de/sicherheit</span>
+                                    <span class="popuptooltip" id="Poptooltip">Redirect to: https://www.telekome.de/sicherheit</span>
                                 </div>
                                 <b>(popup tooltips using javascript)</b>
                                 <br><br>
@@ -465,14 +461,23 @@
                            <br><br>
 
                            Die Prämie für die Empfehlung richtet sich nach dem tatsächlich bestellten Produkt im Zeitpunkt des Vertragsabschlusses des Kunden. Mehr Information bitte klicken Sie
-                           <a href="https://telekome.de/information" data-toggle="boottooltip" data-html="true" data-placement="top" title='Redirect to: <a href="https://www.telekom.de/information" style="color: #00A4D6; text-decoration: underline;">https://www.telekom.de/information</a>' style="color: #00A4D6; text-decoration: underline;" class="tooltip-custom">here</a>.<b>(fake tooltip using bootstrap)</b>
+                           <a href="https://telekome.de/information" data-toggle="tooltip" data-html="true" data-placement="top" title="https://www.telekom.de/information" class="boottooltip-inner">here</a>.<b>(fake tooltip using bootstrap)</b>
                           
                               
                             <br><br>
 
-
+                            Es erwarten Sie Deals rund um die UEFA EURO 2024™ sowie weitere exklusive Geschenke und besondere Vorteile, die <a href="https://www.telekom1.de/information" title="Hier erfahren Sie mehr über die Vorteile" style="text-decoration: underline">erfreuen</a>! <b>(fake tooltip using title attribute of text)</b>   
 
                               <br><br>
+
+                              <a href="https://malicious-website.com/verify">
+                                 <button title="Hier erfahren Sie mehr über die Vorteile">Mehr Information</button>
+                             </a>
+                               <b>(fake tooltip using title attribute of button)</b>
+
+                               <br><br>
+
+                              
 
                               <!-- Mailto-Scheme -->
                                 Eine direkte Antwort auf diese E-Mail ist nicht möglich. Wenn Sie uns per E-Mail erreichen wollen, nutzen Sie bitte unseren 
@@ -522,12 +527,14 @@
     
 
 
-
+        //for bootstrap tooltip
         $(document).ready(function(){
-         $('[data-toggle="boottooltip"]').tooltip({
+         $('[data-toggle="tooltip"]').tooltip({
             offset: '0, 10' // Adjust the offset here: x, y
         });
     });
+
+
 </script>
 
 
