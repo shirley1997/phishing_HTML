@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Tooltip Example</title>
+    <style>
+        .tooltip-container {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        .tooltip-text {
+            visibility: hidden;
+            width: 120px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above the text */
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- React and ReactDOM Libraries -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+    <script type="text/javascript">
+        // Tooltip component
+        class Tooltip extends React.Component {
+            render() {
+                return (
+                    <div className="tooltip-container">
+                        {this.props.text}
+                        <div className="tooltip-text">
+                            {this.props.tooltip}
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        // Render the Tooltip component inside the "app" div
+        ReactDOM.render(
+            <Tooltip text="Hover over me" tooltip="This is a tooltip!" />,
+            document.getElementById('app')
+        );
+    </script>
+</body>
+</html>
