@@ -12,7 +12,7 @@
    
       
 
-      <!-- for Bootstrap Tooltips-->
+      <!-- for Fake Tooltip using Bootstrap -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -29,24 +29,25 @@
             
 
 
-            /* for bootstrap tooltip  */
-            .boottooltip {
-            font-size: 12px; /* Adjust the font size */
+         /* CSS style for Fake Tooltip using Bootstrap  */
+         .boottooltip {
+         font-size: 12px; /* Adjust the font size */
             
-            }
+         }
 
-            .boottooltip-inner {
-            background-color: #c55e5e; /* Custom background color */
-            color: #ffffff; /* Text color */
+         .boottooltip-inner {
+         background-color: #c55e5e; /* Custom background color */
+         color: #ffffff; /* Text color */
             
-            }
+         }
 
 
         .content {
           text-align: center;
         }
       
-      
+         /* For Fake Tooltip using HTML and CSS  */
+
         .tooltip-container {
           position: relative;
           display: inline-block;
@@ -84,9 +85,10 @@
           text-decoration: none;
         }
       
-        /* Fade In tooltip with CSS */
-        .tooltip-container .tooltipanime {
-          
+
+        /* For Fake Fade In Tooltip using HTML and CSS */
+
+        .tooltip-container .tooltipanime {  
           visibility: hidden;
           width: max-content;
           background-color: rgb(167, 159, 172);
@@ -101,7 +103,7 @@
           margin-left: -210px;
           font-size: 10px;
           
-          /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+          /* Fake Fade In Tooltip using HTML and CSS - takes 1 second to go from 0% to 100% opac: */
           opacity: 0;
           transition: opacity 1s;
         }
@@ -114,7 +116,7 @@
       
       
       
-        /*create the trainagle under tooltips */
+        /* create the trainagle under tooltips */
         .tooltip-container .tooltip::after {
                   content: '';
                   position: absolute;
@@ -128,7 +130,7 @@
       
       
 
-              /* tooltip with CSS hover effect*/
+            /* For Fake Tooltip using CSS Hover Effect*/
             .tooltip-link {
                 position: relative;
                 text-decoration: none;
@@ -158,7 +160,7 @@
             }
             
 
-             /* CSS setting of popup tooltip */
+             /* For Fake Popup Tooltip using JavaScript */
                 .popup-container {
                     color: #00A4D6;
                     position: relative;
@@ -205,7 +207,8 @@
                     animation: fadeIn 0.5s
                     }
                     
-                    
+
+                    /* For Fake Fade In Tooltip using HTML and CSS */
                     @-webkit-keyframes fadeIn {
                     from {opacity: 0;}
                     to {opacity: 1;}
@@ -216,24 +219,7 @@
                     to {opacity:1 ;}
                     }
 
-
-
-
-
-                   
-
-
       </style>
-
-
-
-
-
-
-
-            
-
-            
 
 
 
@@ -371,7 +357,7 @@
                                  <table width="440">
                                     <tbody>
                                        <tr>
-                                        <!-- normal tooltip with HTML and CSS style -->
+                                        <!-- Fake Tooltip using HTML and CSS  -->
                                           <td style="width: 33%; text-align: center;">
                                             <div class="tooltip-container">
                                                 <a href="https://www.telekomm.de/kundenvertrag" target="_blank">
@@ -383,7 +369,7 @@
                                         </div>
                                         </td>
 
-                                        <!-- fade in tooltip with HTML and CSS style -->
+                                        <!-- Fake Fade In Tooltip using HTML and CSS -->
                                           <td style="width: 33%; text-align: center;">
                                             <div class="tooltip-container">
                                             <a href="https://www.telekomm.de/login" target="_blank" >
@@ -395,7 +381,7 @@
                                         </div>
                                         </td>
 
-                                        <!-- tooltip with CSS hover effect -->
+                                        <!-- Fake Tooltip using CSS Hover Effect -->
                                           <td style="width: 33%; text-align: center;">
                                             <div class="content">
                                                 <a href="https://www.telekome.de/hilfe" target="_blank"  class="tooltip-link">
@@ -452,6 +438,8 @@
                                 <b>(Fake Popup Tooltip using JavaSrcipt)</b>
                                 <br><br>
 
+
+                                <!-- Ropemaker -->
                                 Diese E-Mail wird versendet aufgrund der Einwilligung, über Produkte und Dienstleistungen der Telekom informiert zu werden. Über den Link 
                                  <span id="link1" ><a href="http://telekom.de">Abmeldung</a></span>
                                  <span id="link2" ><a href="http://telekome.de">Abmeldung</a></span> 
@@ -460,6 +448,7 @@
 
 
                            <br><br>
+                           <!-- Fake Tooltip using Bootstrap -->
 
                            Die Prämie für die Empfehlung richtet sich nach dem tatsächlich bestellten Produkt im Zeitpunkt des Vertragsabschlusses des Kunden. Mehr Information bitte klicken Sie
                            <a href="https://telekome.de/information" data-toggle="tooltip" data-html="true" data-placement="top" title="https://www.telekom.de/information" class="boottooltip-inner">here</a>.<b>(Fake Tooltip using Bootstrap)</b>
@@ -467,9 +456,13 @@
                               
                             <br><br>
 
+                           <!-- Fake Tooltip using title-attribute (on Text) -->
+                            
                             Es erwarten Sie Deals rund um die UEFA EURO 2024™ sowie weitere exklusive Geschenke und besondere Vorteile, die <a href="https://www.telekom1.de/information" title="Hier erfahren Sie mehr über die Vorteile" style="text-decoration: underline">erfreuen</a>! <b>(Fake Tooltip using title-attribute (on text))</b>   
 
                               <br><br>
+
+                           <!-- Fake Tooltip using title-attribute (on Button) -->
 
                               <a href="https://malicious-website.com/verify">
                                  <button title="Hier erfahren Sie mehr über die Vorteile">Mehr Information</button>
@@ -481,7 +474,8 @@
                                <table width="200">
                                  <tbody>
                                     <tr>
-                                     <!-- normal tooltip with HTML and CSS style -->
+
+                              <!-- Fake Tooltip using title-attribute (on Image) -->
                                      <td style="width: 33%; text-align: center;">
                                        <div class="tooltip-container">
                                            <a href="https://www.telekomm.de/kundenvertrag" target="_blank" title="Redirect to: https://www.telekom.de/kundenvertrag">
@@ -489,16 +483,10 @@
                                            </a>
                                        </div>
                                    </td>
-                                   
-
-                                     
-
-                                     
                                     </tr>
                                     <tr>
                                        <td style="width: 33%; text-align: center;"><span style="font-family: Arial; color: #7495f0; font-size: 10px; font-weight: bold;">Ihre Verträge online<br>im Kundencenter <br><font color="black">(Fake Tooltip using title-attribute (on image)</font></span></td>
-                                       
-                                       
+  
                                     </tr>
                                  </tbody>
                               </table>
@@ -537,6 +525,8 @@
       </html>
 
       <script>
+
+        //for "Fake Popup Tooltip using JavaScript" 
         // When the user clicks on <div>, open the popup
     
         function PopUpFunction() {
@@ -552,7 +542,7 @@
     
 
 
-        //for bootstrap tooltip
+        //for "Fake Tooltip using Bootstrap"
         $(document).ready(function(){
          $('[data-toggle="tooltip"]').tooltip({
             offset: '0, 10' // Adjust the offset here: x, y

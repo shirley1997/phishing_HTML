@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Text or Button with Tooltip</title>
+<title>Text or Button with Fake Tooltip using HTML and CSS</title>
 
 <br><br><br>
 
@@ -52,7 +52,7 @@
     text-decoration: none;
   }
 
-  /* Fade In tooltip with CSS */
+  /* "Fake Fade In Tooltip using HTML and CSS" */
   .tooltip-container .tooltipanime {
     
     visibility: hidden;
@@ -69,7 +69,7 @@
     margin-left: -200px;
     font-size: 12px;
     
-    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    /* Fake Fade In Tooltip - takes 1 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 1s;
   }
@@ -82,7 +82,7 @@
 
 
 
-  /*create the trainagle under tooltips */
+  /*Create the trainagle under tooltips */
   .tooltip-container .tooltip::after {
             content: '';
             position: absolute;
@@ -96,22 +96,22 @@
 
 
         a {
-    text-decoration: none; /* Remove underline 
+    text-decoration: none; /* Remove underline */
     cursor: pointer; /* Ensure cursor shows as pointer on hover */
         }  
 
-  /* Hide default browser tooltip */
+ 
 
 </style>
 </head>
 
 
 <body>
-  <!-- add tooltip in a word from a sentence use <span> attribute, Pure CSS Tooltips -->
+  <!-- add tooltip in a word from a sentence use <span> attribute -->
   <div class="content">
 
     
-    <!--Text with fade in tooltip-->
+    <!--Fake Fade In Tooltip using HTML and CSS (on Text)-->
     <div class="tooltip-container">
       <a href="https://malicious-website.com" class="tooltip-link">Fade In Tooltip</a>
       <span class="tooltipanime">redirect to: https://www.trustedbank.com/verify</span>
@@ -119,6 +119,7 @@
 
     <br><br><br><br>
 
+  <!--Fake Fade In Tooltip using HTML and CSS (on Button)-->
     <div class="tooltip-container">
       <a href="https://malicious-website.com" class="tooltip-link">
         <button class="tooltip-button">Fade In Tooltip</button>
@@ -129,6 +130,8 @@
 
     <br><br><br><br>
 
+
+    <!--Fake Tooltip using HTML and CSS (on Text, use span-attribute)-->
     <p>
         Please verify your account
         <span class="tooltip-container">
@@ -149,6 +152,7 @@
 
     <br><br><br><br>
 
+    <!--Fake Tooltip using HTML and CSS (on Button)-->
     <p>
         <button class="tooltip-container" onclick="window.location.href='https://malicious-website.com'">
             Click here to verify
@@ -158,14 +162,11 @@
 
     <br><br><br><br>
 
-    <!-- Text with Tooltip 
-   in VS code defult browser will display defult tooltip, but in firefox and Microsoft Edge, 
-   the original tooltip will be hidden, only the custom CSS tooltip is shown
-   The Tooltip is with hyperlink which leads to malicious website-->
+
    <br>
 
 
-   <!--Text with tooltip-->
+  <!--Fake Tooltip using HTML and CSS (on Text)-->
     <div class="tooltip-container">
       
       <a href="https://malicious-website.com/verify">Click me</a>
@@ -177,7 +178,7 @@
 
     <br><br><br><br>
 
-    <!-- Button with tooltip -->
+    <!--Fake Tooltip using HTML and CSS (on Button)-->
     <div class="tooltip-container">
       <button onclick="window.location.href='https://malicious-website.com/verify'">Click me</button>
       <div class="tooltip">
@@ -186,11 +187,6 @@
 
 
 
-
-
-  
-
-    
   </div>
 </body>
 </html>
